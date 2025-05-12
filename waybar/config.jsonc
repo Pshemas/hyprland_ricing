@@ -2,7 +2,7 @@
 {
     // "layer": "top", // Waybar at top layer
     // "position": "bottom", // Waybar position (top|bottom|left|right)
-    "height": 24, // Waybar height (to be removed for auto height)
+    "height": 32, // Waybar height (to be removed for auto height)
     // "width": 1280, // Waybar width
     "spacing": 4, // Gaps between modules (4px)
     "output": ["DP-1", "DP-3"],
@@ -15,7 +15,7 @@
         "hyprland/window"
     ],
     "modules-right": [
-        "mpd",
+        // "mpd",
         "idle_inhibitor",
         "tray",
         "pulseaudio",
@@ -49,9 +49,10 @@
          }
      },
      "hyprland/window": {
-	     "format": "{initialClass}",
+	     "format": "{title}",
 	     "rewrite": {
-		     "zen" : "Zen Browser"
+		     "(.*)Zen Browser": "Zen Browser",
+             "^.*Sublime Text.*$": "Sublime Text"
 	     }
      },
     "keyboard-state": {
@@ -108,7 +109,7 @@
         }
     },
     "tray": {
-        "icon-size": 21,
+        "icon-size": 18,
         "spacing": 10,
         "icons": {
            "blueman": "bluetooth"
@@ -135,7 +136,8 @@
     },
     "cpu": {
         "format": "{usage}% ",
-        "tooltip": false
+        "tooltip": false,
+	"on-click": "ghostty --title='Btop++' -e btop"
     },
     "memory": {
         "format": "{}% "

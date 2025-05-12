@@ -4,7 +4,7 @@ So here's my first attempt at ricing Hyprland. Haven't thought I'd enjoy it as m
 
 Issues? Warning in the waybar css file. For some reason (I still haven't figured why) workspace switcher behaves differently (or I'm not seeing something) than the rest of the modules - which forced me to use min. height.
 
-Also need to clean up css file in general to get rid of unneeded repetitions. Oh, and can't recall where I got the wallpaper from.
+EDIT - luckily first bunch of css cleanups for waybar are done. Still some optimizations to do, but now it's much more managable.
 
 Currently using wofi as app launcher - but will probably switch to rofi. Because of 2 reasons: somehow it is case sensitive with flatpak apps and also I'm using rofi for bluetooth module (which is currently disabled as I'm getting the same functionality from tray).
 

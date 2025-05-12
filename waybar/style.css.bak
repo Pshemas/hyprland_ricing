@@ -1,0 +1,243 @@
+/*
+based on PlusUltra, with Adwaita
+lightblue #62a0ea
+solidblue #1c71d8
+extralightgreen #8ff0a4
+lightgreen #57e389
+green #2ec27e
+yightyellow #f8e45c
+yellow #f5c211
+extralightred #f66151
+lightred #ed333b
+red #c01c28
+extralightpurple #dc8add
+lightpurple #c061cb
+purple #813d9c
+darkgrey #241f31
+midgrey #3d3846
+ */
+
+* {
+	border: none;
+	border-radius: 0;
+	font-family: Nerd Font Hack;
+	font-size: 12px;
+	min-height: 16px;
+}
+
+window#waybar {
+	background: transparent;
+}
+
+window#waybar.hidden {
+	opacity: 0.2;
+}
+
+#window {
+	font-weight: bold;
+	margin-top: 8px;
+	margin-left: 8px;
+	margin-right: 8px;
+	margin-bottom: 0;
+	padding-left: 16px;
+	padding-right: 16px;
+	border-radius: 12px;
+	background: #1e1e1e;
+	transition: none;
+}
+
+window#waybar.empty #window {
+	background: transparent;
+}
+
+window#waybar.termite #window,
+window#waybar.Firefox #window,
+window#waybar.Navigator #window,
+window#waybar.PCSX2 #window {
+    color: #000000;
+	background: #e6e6e6;
+}
+
+#workspaces {
+/*	font-size: 4px;*/
+	margin-top: 8px;
+	margin-left: 10px;
+	margin-bottom: 0;
+	padding-left: 12px;
+	padding-right: 12px;
+	border-radius: 12px;
+	background: #1e1e1e;
+	transition: none;
+}
+
+#workspaces button {
+	transition: none;
+	color: #f8f8f2;
+	background: transparent;
+}
+
+#workspaces button.focused {
+	color: #9aedfe;
+}
+
+#workspaces button:hover {
+	transition: none;
+	box-shadow: inherit;
+	text-shadow: inherit;
+	color: #ff79c6;
+}
+
+#mpd {
+	margin-top: 8px;
+	margin-left: 8px;
+	margin-bottom: 0;
+	padding-left: 12px;
+	padding-right: 12px;
+	border-radius: 12px;
+	background: #282a36;
+	transition: none;
+	color: #000000;
+	background: #5af78e;
+}
+
+#mpd.disconnected,
+#mpd.stopped {
+	color: #f8f8f2;
+	background: #282a36;
+}
+
+#network {
+	margin-top: 8px;
+	margin-left: 6px;
+	margin-bottom: 0;
+	padding-left: 12px;
+	padding-right: 12px;
+	border-radius: 12px;
+	transition: none;
+	color: #000000;
+	background: #33d17a;
+}
+
+#pulseaudio {
+	margin-top: 8px;
+	margin-left: 6px;
+	margin-bottom: 0;
+	padding-left: 12px;
+	padding-right: 12px;
+	border-radius: 12px;
+	transition: none;
+	color: #000000;
+	background: #8ff0a4;
+}
+
+#bluetooth {
+	margin-top: 8px;
+	margin-left: 8px;
+	margin-bottom: 0;
+	padding-left: 12px;
+	padding-right: 12px;
+	border-radius: 12px;
+	transition: none;
+	color: #000000;
+	background: #62a0ea;
+}
+
+#temperature {
+	margin-top: 8px;
+	margin-left: 8px;
+	margin-bottom: 0;
+	padding-left: 12px;
+	padding-right: 12px;
+	border-radius: 12px;
+	transition: none;
+	color: #000000;
+	background: #5af78e;
+}
+
+#cpu {
+	margin-top: 8px;
+	margin-left: 6px;
+	margin-bottom: 0;
+	padding-left: 12px;
+	padding-right: 12px;
+	border-radius: 12px;
+	transition: none;
+	color: #000000;
+	background: #ffa348;
+}
+
+#memory {
+	margin-top: 8px;
+	margin-left: 6px;
+	margin-bottom: 0;
+	padding-left: 12px;
+	padding-right: 12px;
+	border-radius: 12px;
+	transition: none;
+	color: #000000;
+	background: #f66151;
+}
+
+#clock {
+	font-weight: bold;
+	margin-top: 8px;
+	margin-left: 6px;
+	margin-bottom: 0;
+	padding-left: 12px;
+	padding-right: 12px;
+	border-radius: 12px;
+	transition: none;
+	color: #f8f8f2;
+	background: #1e1e1e;
+}
+
+#custom-power{
+	font-weight: bold;
+	font-size: 18px;
+	margin-right: 10px;
+	margin-top: 8px;
+	margin-left: 6px;
+	margin-bottom: 0;
+	padding-left: 10px;
+	padding-right: 0px;
+	border-radius: 12px;
+	transition: none;
+	color: #f8f8f2;
+/*	color: #ed333b;*/
+	background: #1e1e1e;
+}
+
+#power-profiles-daemon {
+	margin-top: 8px;
+	margin-left: 6px;
+	margin-bottom: 0;
+	padding-left: 12px;
+	padding-right: 12px;
+	border-radius: 12px;
+	transition: none;
+	color: #000000;
+}
+
+#power-profiles-daemon.performance {
+  background-color: #c061cb;
+}
+
+#power-profiles-daemon.balanced {
+  background-color: #f5c211;
+}
+
+#power-profiles-daemon.power-saver {
+  background-color: #26a269;
+}
+
+#idle_inhibitor {
+	margin-top: 8px;
+	margin-left: 4px;
+	margin-right: 4px;
+}
+
+#tray {
+	margin-top: 8px;
+	margin-left: 4px;
+	margin-right: 4px;
+}
